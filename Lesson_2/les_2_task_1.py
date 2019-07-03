@@ -5,3 +5,30 @@
 # программа должна сообщать об ошибке и снова запрашивать знак операции.
 # Также она должна сообщать пользователю о невозможности деления на ноль,
 # если он ввел его в качестве делителя.
+
+while True:
+    print('Введите два натуральных числа и знак операции(+, -, *, /). Для выхода введите 0 в знак операции.')
+    number_1 = int(input('Первое число: '))
+    number_2 = int(input('Второе число: '))
+    operation = input('Знак операции: ')
+
+    if operation == '+':
+        res = number_1 + number_2
+        print(f'Результат: {res}\n')
+    elif operation == '-':
+        res = number_1 - number_2
+        print(f'Результат: {res}\n')
+    elif operation == '*':
+        res = number_1 * number_2
+        print(f'Результат: {res}\n')
+    elif operation == '/':
+        if number_2 == 0:
+            print('Нельзя делить на 0!\n')
+        else:
+            res = number_1 / number_2
+            print(f'Результат: {res}\n')
+    else:
+        print('Введены некорректные данные. Повторите ввод.\n')
+
+    if operation == '0':
+        break
